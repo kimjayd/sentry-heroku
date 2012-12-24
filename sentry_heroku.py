@@ -19,4 +19,5 @@ SENTRY_WEB_OPTIONS = {
 
 for env_key, env_value in os.environ.iteritems():
     if env_key.startswith('SENTRY_'):
+        env_key = env_key.split('SENTRY_')[1]
         globals()[env_key] = env_value

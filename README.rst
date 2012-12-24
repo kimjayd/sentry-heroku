@@ -38,4 +38,17 @@ In the middle you will meet prompts to create super user:
    Password (again): 
    Superuser created successfully.
 
+If you want to connect GitHub identification, just set your GitHub
+application keys.
+
+.. code-block:: console
+ 
+   $ heroku config:set --app my-sentry SENTRY_GITHUB_APP_ID=<app_id>
+   Setting config vars and restarting my-sentry... done, v09
+   $ heroku config:set --app my-sentry SENTRY_GITHUB_API_SECRET=<app_secret>
+   Setting config vars and restarting my-sentry... done, v10
+
+You can also set another Sentry configurations via heroku config setting.
+But you should be aware that `SENTRY_` must be prefix of configuration key.
+
 .. _Sentry: http://sentry.readthedocs.org/
